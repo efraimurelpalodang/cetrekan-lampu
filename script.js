@@ -1,9 +1,24 @@
-function saklar(params) {
+function saklar(act, lamp) {
   const lampu1 = document.querySelector('#lampu1');
-  if( params == 'on' ) {
-    lampu1.src = 'assets/images/on.gif';
-  } else if ( params == 'off' ) {
-    lampu1.src = 'assets/images/off.gif';
+  const lampu2 = document.querySelector('#lampu2');
+  const lampu3 = document.querySelector('#lampu3');
+
+  if( act == 'on' ) {
+    if( lamp == 1 ) {
+      lampu1.src = 'assets/images/on.gif';
+    } else if ( lamp == 2 ) {
+      lampu2.src = 'assets/images/on.gif';
+    } else if ( lamp == 3 ) {
+      lampu3.src = 'assets/images/on.gif';
+    }
+  } else if ( act == 'off' ) {
+    if (lamp == 1) {
+      lampu1.src = "assets/images/off.gif";
+    } else if (lamp == 2) {
+      lampu2.src = "assets/images/off.gif";
+    } else if (lamp == 3) {
+      lampu3.src = "assets/images/off.gif";
+    }
   }
 
   return lampu1;
